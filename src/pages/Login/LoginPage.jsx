@@ -2,7 +2,7 @@ import cn from "classnames";
 import { Link } from "react-router-dom";
 import { Form } from "./internal/Form";
 import classes from "./styles.module.scss";
-import loginIMG from "../../assets/login-img.png";
+import loginIMG from "src/assets/login-img.png";
 
 const LoginPage = () => {
   const submit = (data) => {

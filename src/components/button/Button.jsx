@@ -1,7 +1,7 @@
+import { useEffect, useRef } from "react";
 import cn from "classnames";
 import classes from "./style.module.scss";
-import { useRipple } from "../../hooks/ripple/useRipple";
-import { useEffect, useRef } from "react";
+import { useRipple } from "src/hooks/ripple/useRipple";
 
 const btnVariants = {
   default: classes["btn--default"],
@@ -18,6 +18,7 @@ export const Button = ({
   children,
   variant = "default",
   size = "md",
+  type = "button",
   className,
   ...props
 }) => {
@@ -34,6 +35,7 @@ export const Button = ({
     <button
       className={cn(classes["btn"], className, variantClass, sizeClass)}
       ref={buttonRef}
+      type={type}
       {...props}
     >
       {children}

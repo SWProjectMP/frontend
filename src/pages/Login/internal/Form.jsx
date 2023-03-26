@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import cn from "classnames";
-import { Input, Radio, Button, SvgIcon } from "../../../components";
+import { Input, Radio, Button, SvgIcon } from "src/components";
 import classes from "./form.module.scss";
 
 export const Form = ({ onSubmit, className, ...props }) => {
@@ -47,7 +47,7 @@ export const Form = ({ onSubmit, className, ...props }) => {
       <Button type="submit" variant="accent" size="lg">
         Войти
       </Button>
-      <Button type="submit" variant="outline" size="lg">
+      <Button variant="outline" size="lg">
         <SvgIcon name="vk" />
         Регистрация через VK
       </Button>
