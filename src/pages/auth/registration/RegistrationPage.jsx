@@ -35,6 +35,10 @@ const RegistrationPage = () => {
         "wrapper"
       )}
     >
+      <div className={shared["auth-page__img-wrapper"]}>
+        <img src={loginIMG} className={shared["auth-page__img"]} />
+      </div>
+
       <div className={classes["registration-page__form-wrapper"]}>
         <h1>Регистрация</h1>
         <p className="subtitle">Пожалуйста, заполните данные.</p>
@@ -51,10 +55,6 @@ const RegistrationPage = () => {
             Войти
           </Link>
         </div>
-      </div>
-
-      <div className={shared["auth-page__img-wrapper"]}>
-        <img src={loginIMG} className={shared["auth-page__img"]} />
       </div>
     </div>
   );
