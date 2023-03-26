@@ -4,7 +4,11 @@ import { Input, Radio, Button, SvgIcon } from "../../../components";
 import classes from "./form.module.scss";
 
 export const Form = ({ onSubmit, className, ...props }) => {
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
 
   return (
     <form
@@ -12,8 +16,33 @@ export const Form = ({ onSubmit, className, ...props }) => {
       onSubmit={handleSubmit(onSubmit)}
       {...props}
     >
-      <Input {...register("email")} placeholder="email" size="lg" />
-      <Input {...register("password")} type="password" size="lg" />
+      <Input
+        {...register("email", {
+          required: "Данное поле обязательно*",
+        })}
+        placeholder="Почта"
+        size="lg"
+      >
+        Email адрес{" "}
+        {errors.email && (
+          <span class="text--error">{errors.email.message}</span>
+        )}
+      </Input>
+
+      <Input
+        {...register("password", {
+          required: "Данное поле обязательно*",
+        })}
+        type="password"
+        placeholder="Пароль"
+        size="lg"
+      >
+        Пароль{" "}
+        {errors.password && (
+          <span className="text--error">{errors.password.message}</span>
+        )}
+      </Input>
+
       <Radio {...register("remember")}>Запомнить меня</Radio>
       <Button type="submit" variant="accent" size="lg">
         Войти

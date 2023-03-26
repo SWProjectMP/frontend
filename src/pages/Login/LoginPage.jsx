@@ -1,4 +1,5 @@
-import { NavLink } from "react-router-dom";
+import cn from "classnames";
+import { Link } from "react-router-dom";
 import { Form } from "./internal/Form";
 import classes from "./styles.module.scss";
 import loginIMG from "../../assets/login-img.png";
@@ -9,7 +10,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className={classes["login-page"]}>
+    <div className={cn(classes["login-page"], "wrapper")}>
       <div className={classes["login-page__form-wrapper"]}>
         <h1>Войти в систему</h1>
         <p className="subtitle">Пожалуйста, введите ваши контактные данные.</p>
@@ -18,9 +19,9 @@ const LoginPage = () => {
 
         <div className={classes["login-page__not-registered"]}>
           У вас нет аккаунта?{" "}
-          <NavLink to="/registration" className="link">
+          <Link to="/registration" className="link">
             Зарегистрироваться
-          </NavLink>
+          </Link>
         </div>
       </div>
 
