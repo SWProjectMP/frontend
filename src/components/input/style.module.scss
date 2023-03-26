@@ -1,0 +1,24 @@
+.input {
+  &__element {
+    padding: 12px;
+    border: 1px solid $light-gray;
+    border-radius: 7px;
+    width: 100%;
+
+    &:focus {
+      outline: 1px solid $accent;
+    }
+
+    &::placeholder {
+      color: $light-gray;
+    }
+  }
+
+  &--md {
+    height: 40px;
+  }
+
+  &--lg {
+    height: 48px;
+  }
+}

@@ -1,0 +1,39 @@
+.btn {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  position: relative;
+  overflow: hidden;
+
+  &--accent {
+    background: $accent;
+    color: $white;
+
+    .ripple {
+      background: $white-30;
+    }
+  }
+
+  &--outline {
+    border: 1px solid $light-gray;
+    background: $white;
+
+    .ripple {
+      background: $accent-10;
+    }
+  }
+
+  &--md {
+    height: 40px;
+  }
+
+  &--lg {
+    height: 48px;
+  }
+}

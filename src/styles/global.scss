@@ -2,8 +2,24 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: $text-main;
 }
 
-body {
-  font-family: sans-serif;
+h1 {
+  font-size: 42px;
+  line-height: 50px;
+  font-weight: 600;
+}
+
+.link {
+  color: $accent;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.subtitle {
+  color: $text-light;
+  font-size: 18px;
+  line-height: 28px;
 }
