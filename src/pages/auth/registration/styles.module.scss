@@ -1,0 +1,33 @@
+.registration-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  min-height: 100vh;
+
+  &__form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 380px;
+    margin-left: 10%;
+  }
+
+  &__img-wrapper {
+    max-height: calc(100vh - 40px);
+    aspect-ratio: 9/10;
+    flex-shrink: 0;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  &__not-registered {
+    margin-top: 30px;
+  }
+}

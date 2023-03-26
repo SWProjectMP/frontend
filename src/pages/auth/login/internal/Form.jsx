@@ -23,7 +23,7 @@ export const Form = ({ onSubmit, className, ...props }) => {
         placeholder="Почта"
         size="lg"
       >
-        Email адрес{" "}
+        Email адрес
         {errors.email && (
           <span class="text--error">{errors.email.message}</span>
         )}
@@ -37,7 +37,7 @@ export const Form = ({ onSubmit, className, ...props }) => {
         placeholder="Пароль"
         size="lg"
       >
-        Пароль{" "}
+        Пароль
         {errors.password && (
           <span className="text--error">{errors.password.message}</span>
         )}

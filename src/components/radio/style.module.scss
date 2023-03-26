@@ -4,6 +4,22 @@
   align-items: center;
 
   & > input {
-    accent-color: $accent;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: $light-gray;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    transition: all $transition;
+
+    &:focus-visible {
+      outline-offset: 0;
+    }
+
+    &:checked {
+      box-shadow: 0 0 0 1px $accent;
+      border: 4px solid $accent;
+      background-color: $white;
+    }
   }
 }

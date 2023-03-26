@@ -1,9 +1,9 @@
 import { lazy, Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
-const LoginPage = lazy(() => import("src/pages/login/LoginPage"));
+const LoginPage = lazy(() => import("src/pages/auth/login/LoginPage"));
 const RegistrationPage = lazy(() =>
-  import("src/pages/registration/RegistrationPage")
+  import("src/pages/auth/registration/RegistrationPage")
 );
 
 const AsyncPage = ({ children }) => {

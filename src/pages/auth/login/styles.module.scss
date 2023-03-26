@@ -1,0 +1,9 @@
+.login-page {
+  &__form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 380px;
+    margin-left: 10%;
+  }
+}
