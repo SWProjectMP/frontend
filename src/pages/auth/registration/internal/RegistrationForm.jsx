@@ -16,10 +16,10 @@ export const RegistrationForm = ({ onSubmit }) => {
       <Input {...register("email")} size="lg">
         Email адрес
       </Input>
-      <Input {...register("password")} size="lg">
+      <Input {...register("password")} size="lg" type="password">
         Придумайте пароль
       </Input>
-      <Input {...register("password-repeat")} size="lg">
+      <Input {...register("password-repeat")} size="lg" type="password">
         Повторите пароль
       </Input>
 
