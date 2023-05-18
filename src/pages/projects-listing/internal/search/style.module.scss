@@ -1,0 +1,27 @@
+.search {
+  background: $white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 15px;
+  width: max-content;
+  border-radius: 16px;
+
+  &__clear-btn {
+    background: none;
+    cursor: pointer;
+    border: none;
+  }
+
+  input {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    height: 50px;
+    min-width: 250px;
+
+    &::placeholder {
+      color: $light-gray;
+    }
+  }
+}

@@ -3,7 +3,21 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  color: $text-main;
+  color: $black;
+}
+
+body {
+  background: $main-bg;
+}
+
+svg {
+  * {
+    color: unset;
+  }
+}
+
+a {
+  text-decoration: none;
 }
 
 h1 {
@@ -33,4 +47,20 @@ h1 {
 .wrapper {
   max-width: $screen-lg;
   margin: 0 auto;
+  padding: 0 100px;
+
+  @media (max-width: $screen-md) {
+    padding: 0 60px;
+  }
+
+  @media (max-width: $screen-sm) {
+    padding: 0 20px;
+  }
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }

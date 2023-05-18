@@ -5,6 +5,9 @@ const LoginPage = lazy(() => import("src/pages/auth/login/LoginPage"));
 const RegistrationPage = lazy(() =>
   import("src/pages/auth/registration/RegistrationPage")
 );
+const ProjectsListingPage = lazy(() =>
+  import("src/pages/projects-listing/ProjectsListingPage")
+);
 
 const AsyncPage = ({ children }) => {
   return <Suspense fallback="">{children}</Suspense>;
@@ -28,6 +31,14 @@ const router = createBrowserRouter([
     element: (
       <AsyncPage>
         <RegistrationPage />
+      </AsyncPage>
+    ),
+  },
+  {
+    path: "/projects/:page",
+    element: (
+      <AsyncPage>
+        <ProjectsListingPage />
       </AsyncPage>
     ),
   },

@@ -1,0 +1,38 @@
+.tags-carousel {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+
+  &__carousel {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__item {
+    border: 1px solid $black;
+    border-radius: 20px;
+    padding: 8px;
+    flex-shrink: 0;
+  }
+
+  &__btn {
+    border: 1px solid $black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    background: none;
+    cursor: pointer;
+    border-radius: 50%;
+    flex-shrink: 0;
+
+    & > svg {
+      transform: rotate(-90deg);
+      width: 15px;
+      height: 15px;
+    }
+  }
+}

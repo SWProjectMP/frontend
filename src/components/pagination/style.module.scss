@@ -1,0 +1,41 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+
+    &--active {
+      border: 1px solid $black;
+      border-radius: 50%;
+    }
+  }
+
+  &__prev,
+  &__next {
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    &--disabled {
+      pointer-events: none;
+
+      svg {
+        color: $light-gray;
+      }
+    }
+  }
+  &__prev {
+    transform: rotate(90deg);
+  }
+  &__next {
+    transform: rotate(-90deg);
+  }
+}
